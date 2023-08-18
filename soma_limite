@@ -2,14 +2,21 @@
 programa que testa se numero maior que limite
 '''
 
+
 def soma_limite(a, b):
     return limite > a + b
 
-x = int(input("x: "))
-y = int(input("y: "))
-limite = int(input("limite: "))
 
-if (soma_limite(x, y)) == True:
+while True:
+    try:
+        x = int(input("x: "))
+        y = int(input("y: "))
+        limite = int(input("limite: "))
+        break
+    except ValueError:
+        print("resposta deve ser um int")
+
+if soma_limite(x, y) == True:
     print("Soma menor que limite")
 else:
     print("Soma maior ou igual que limite")
