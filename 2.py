@@ -1,3 +1,6 @@
+'''
+função divisão
+'''
 
 def inputes():
     while True:
