@@ -1,22 +1,19 @@
 #programa com função que recebe dois parâmetros inteiros e calcule a potencia
 
-#definir funcao
-def pot(x, y):
-    #return x**y
-    r = 1
-    if x == 0:
-        return 0
-    if y == 0:
-        return 1
-    for num in range(y):
-        r *= x
-    return r
+def receber():
+    a = int(input("Base da potencia: "))
+    b = int(input("Exponente da potencia: "))
+    return a, b
 
+def potencia(a, b):
+    pot = 1
+    for _ in range(b):
+        pot *= a
+    return pot
 
-#declaracao de variavel
-a = int(input("a: "))
-b = int(input("b: "))
+def imprimir(x):
+    print("O resultado da potência é:", x)
 
-
-#main
-print(pot(a, b))
+'''main'''
+a, b = receber()
+imprimir(potencia(a, b))
